@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    height: 100vh;
+    font-family: Inter, sans-serif;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 35%, rgba(80,80,80,1) 100%);
+    background-attachment: fixed;
+    cursor: none;
+    opacity: 0;
+    animation: ani 2s forwards;
+    padding: 96px 0px;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/* Кастомный курсор */
+.circle {
+    height: 19px;
+    width: 19px;
+    border-radius: 19px;
+    background-color: var(--cursor-color);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999;
+}
+/* Цвета */
+:root {
+    --cursor-color: #000;
+    --color-text: #000000;
+    --color-text2: #1b1b1b;
+    --color-text-linkshover: #f0f8ff;
+}
+.container {
+    display: flex;
+    width: 1070px;
+    margin: 0 auto;
+}
+/* Главная */
+.block {
+    width: 528px;
+    height: 3000px;
+}
+.heading {
+    position: fixed;
+    display: flex;
+    width: 528px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 528px;
+    display: inline-block;
+}
+h1 {
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.2px;
+}
+h2 {
+    color: var(--color-text);
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+.WhoAmI {
+    width: 307.93px;
+    color: var(--color-text2);
+    padding: 25px 0px 100px 0px;
+    line-height: 24px;
+}
+li {
+    margin-bottom: 25px;
+}
+.nav {
+    display: inline-block;
+    color: var(--color-text);
+    font-size: 26px;
+    font-weight: 400;
+    transition: 1s;
+    text-align: center;
+    cursor: none;
+}
+a:hover .nav {
+    transform: scale(1.2);
+    mix-blend-mode: difference;
+    color: var(--color-text-linkshover)
+}
+/* Что я умею? */
+.description {
+    color: var(--color-text);
+    padding: 20px;
+    font-size: 19px;
+    font-weight: 500;
+}
+.card {
+    padding: 100px 0px 0px 10px;
+}
